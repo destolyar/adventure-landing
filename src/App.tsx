@@ -21,43 +21,43 @@ const App: React.FunctionComponent = () => {
         <Header/>
       </header>
 
-      <section className='welcome-section-container container'>
+      <section className='welcome-section-container'>
         <WelcomeSection/>
       </section>
 
-      <section className='partners-container container'>
+      <section className='partners-container'>
         <Partners/>
       </section>
 
-      <section className='opportunities-container container'>
+      <section className='opportunities-container'>
         <Opportunities/>
       </section>
 
-      <section className='features-container container'>
+      <section className='features-container'>
         <Features/>
       </section>
 
-      <section className='testimonials-container container'>
+      <section className='testimonials-container'>
         <Testimonials/>
       </section>
 
-      <section className='team-container container'>
+      <section className='team-container'>
         <Team/>
       </section>
 
-      <section className='pricing-container container'>
+      <section className='pricing-container'>
         <Pricing/>
       </section>
 
-      <section className='faq-container container'>
+      <section className='faq-container'>
         <Faq/>
       </section>
 
-      <section className='signup-container container'>
+      <section className='signup-container'>
         <SignUp/>
       </section>
 
-      <footer className='footer-container container'>
+      <footer className='footer-container'>
         <Footer/>
       </footer>
     </div>

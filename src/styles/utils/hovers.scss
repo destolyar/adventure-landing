@@ -9,8 +9,7 @@
 }
 
 @mixin default-button-hover {
-    background-color: $default-button-hover-color;
-    color: $secondary-color-text;
+    background-color: $default-button-hover-background;
     transform: scale(1.02);
     transition: 0.2s;
     cursor: pointer;

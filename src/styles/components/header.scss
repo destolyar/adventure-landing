@@ -1,1 +1,134 @@
 @import '../utils/utils.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+     &__navigation {
+      display: flex;
+      align-items: center;
+      @include laptop {
+        flex-direction: column;
+        justify-content: center;
+      }
+      position: relative;
+      &__item {
+        margin-right: 60px;
+        @include description;
+        color: #999FAE;
+        @include laptop {
+          display: none;
+          margin-right: 0;
+          position: absolute;
+          color: $secondary-text-color;
+          background-color: $default-button-background;
+        }
+        &:hover {
+          @include default-hover;
+          color: $default-button-background;
+
+          @include laptop {
+            color: $secondary-text-color;
+          }
+        }
+      }
+
+      &__first-item {
+        @include laptop {
+          top: 40px;
+          width: 100px;
+          height: 40px;
+        }
+      }
+
+      &__second-item {
+        @include laptop {
+          top: 80px;
+          width: 100px;
+          height: 40px;
+        }
+      }
+      
+      &__third-item{
+        @include laptop {
+          top: 120px;
+          width: 100px;
+          height: 40px;
+        }
+      }
+
+      &__fourth-item {
+        @include laptop {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 160px;
+          width: 100px;
+          height: 40px;
+          color: $secondary-text-color;
+          background-color: $default-button-background;
+        }
+      }
+
+      &__sign-up-button {
+        @include signup-button;
+        @include laptop {
+          display: none;
+        }
+      }
+      &__sign-up-link {
+        display: none;
+        @include description;
+        @include laptop {
+          position: absolute;
+          color: $secondary-text-color;
+          background-color: $default-button-background;
+        }
+        &:hover {
+          @include default-hover;
+          color: $default-button-background;
+          @include laptop {
+            color: $secondary-text-color;
+          }
+        }
+      }
+
+      &__menu-box {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 32px;
+        height: 32px;
+
+        @include laptop {
+          display: flex;
+        }
+
+        &:hover {
+          @include default-hover;
+        }
+
+        &__menu-line {
+          width: 32px;
+          height: 3px;
+          border-radius: 1px;
+          background-color: black;
+        }
+      }
+
+      #check-menu:checked ~ &__item {
+        display: block;
+      }
+
+      #check-menu:checked ~ &__sign-up-link {
+        display: block;
+      }
+   }
+}
+
+
+#check-menu {
+  display: none;
+}
