@@ -1,15 +1,2 @@
 @import './styles/utils/utils.scss';
 
-.container {
-  padding: 50px 140px 50px 140px;
-  background-color: #fdfff0;
-
-  @include laptop{
-    padding: 25px 60px 25px 60px;
-  }
-
-  @include phones {
-   padding: 20px 30px 20px 30px;
-  }
-}
-

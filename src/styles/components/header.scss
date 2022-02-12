@@ -4,131 +4,123 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-     &__navigation {
-      display: flex;
-      align-items: center;
+  padding: 50px 140px 50px 140px;
+  background-color: #fdfff0;
+  overflow: hidden;
+  
+
+  @include laptop{
+    padding: 25px 60px 25px 60px;
+  }
+
+  @include phones {
+   padding: 20px 30px 20px 30px;
+  }
+
+  &__logo {
+    width: 190px;
+    height: 50px;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__navbar {
+    &__burger-menu-label {
       @include laptop {
-        flex-direction: column;
-        justify-content: center;
-      }
-      position: relative;
-      &__item {
-        margin-right: 60px;
-        @include description;
-        color: #999FAE;
-        @include laptop {
-          display: none;
-          margin-right: 0;
-          position: absolute;
-          color: $secondary-text-color;
-          background-color: $default-button-background;
-        }
-        &:hover {
-          @include default-hover;
-          color: $default-button-background;
-
-          @include laptop {
-            color: $secondary-text-color;
-          }
-        }
-      }
-
-      &__first-item {
-        @include laptop {
-          top: 40px;
-          width: 100px;
-          height: 40px;
-        }
-      }
-
-      &__second-item {
-        @include laptop {
-          top: 80px;
-          width: 100px;
-          height: 40px;
-        }
-      }
-      
-      &__third-item{
-        @include laptop {
-          top: 120px;
-          width: 100px;
-          height: 40px;
-        }
-      }
-
-      &__fourth-item {
-        @include laptop {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          top: 160px;
-          width: 100px;
-          height: 40px;
-          color: $secondary-text-color;
-          background-color: $default-button-background;
-        }
-      }
-
-      &__sign-up-button {
-        @include signup-button;
-        @include laptop {
-          display: none;
-        }
-      }
-      &__sign-up-link {
-        display: none;
-        @include description;
-        @include laptop {
-          position: absolute;
-          color: $secondary-text-color;
-          background-color: $default-button-background;
-        }
-        &:hover {
-          @include default-hover;
-          color: $default-button-background;
-          @include laptop {
-            color: $secondary-text-color;
-          }
-        }
-      }
-
-      &__menu-box {
-        display: none;
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: space-around;
-        width: 32px;
-        height: 32px;
-
-        @include laptop {
-          display: flex;
-        }
-
-        &:hover {
-          @include default-hover;
-        }
-
-        &__menu-line {
-          width: 32px;
-          height: 3px;
-          border-radius: 1px;
+        flex-direction: column;
+        width: 50px;
+        height: 20px;
+        padding: 10px;
+  
+        &__line {
+          width: 30px;
+          height: 2px;
           background-color: black;
         }
       }
+    }
+  }
 
-      #check-menu:checked ~ &__item {
-        display: block;
-      }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    transition: 1s;
+    
+    @include laptop {
+      flex-direction: column;
+      top: 100px;
+      margin-left: -100%;
+      position: absolute;
+    }
 
-      #check-menu:checked ~ &__sign-up-link {
-        display: block;
+    @include phones {
+      margin-left: -100%;
+      top: 80px;
+    }
+  
+    &__link {
+      @include description;
+      color: $header-link-color;
+
+      @include laptop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        color: $primary-text-color;
+        background-color: gray;
+
+        &:hover {
+          color: $secondary-text-color;
+          background-color: rgb(92, 92, 92);
+        }
       }
-   }
+    }
+
+    &__sign-up-link {
+      display: none;
+      @include description;
+      color: $header-link-color;
+      @include laptop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        color: $primary-text-color;
+        background-color: gray;
+      }
+    }
+
+    &__sign-up {
+      @include sign-up-button;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
 }
 
-
-#check-menu {
+#burger-menu-checkbox {
   display: none;
+
+  &:checked ~ .header__content {
+    @include laptop {
+      margin-left: -60px;
+    }
+
+    @include phones {
+      margin-left: -30px;
+    }
+  }
 }
+

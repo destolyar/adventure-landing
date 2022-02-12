@@ -17,13 +17,8 @@ import { Footer } from './components/Footer';
 const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-      <header className='header-container container'>
-        <Header/>
-      </header>
-
-      <section className='welcome-section-container'>
-        <WelcomeSection/>
-      </section>
+      <Header/>
+      <WelcomeSection/>
 
       <section className='partners-container'>
         <Partners/>

@@ -2,6 +2,6 @@ import React from "react";
 
 export const Faq: React.FunctionComponent = () => {
   return(
-      <h1>Jopas</h1>
+      <h1>FAQ</h1>
   )
 }

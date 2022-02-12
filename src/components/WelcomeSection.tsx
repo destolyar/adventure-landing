@@ -1,7 +1,8 @@
 import React from "react";
+import '../styles/components/welcome-section.scss'
 
 export const WelcomeSection: React.FunctionComponent = () => {
   return(
-    <h1>Jopas Welcome</h1>
+    <section className="welcome">Welcome Section</section>
   )
 }
