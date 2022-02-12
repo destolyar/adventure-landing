@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/adventure-landing/static/css/main.a6a870a7.css",
+    "main.css": "/adventure-landing/static/css/main.47bf66bd.css",
     "main.js": "/adventure-landing/static/js/main.0ba937f1.js",
     "static/media/CircularStd-Bold.ttf": "/adventure-landing/static/media/CircularStd-Bold.ce7af6ddb66d75a4a2bc.ttf",
     "static/media/CircularStd-Book.ttf": "/adventure-landing/static/media/CircularStd-Book.8dd9b00439575cc09ae4.ttf",
     "index.html": "/adventure-landing/index.html",
-    "main.a6a870a7.css.map": "/adventure-landing/static/css/main.a6a870a7.css.map",
+    "main.47bf66bd.css.map": "/adventure-landing/static/css/main.47bf66bd.css.map",
     "main.0ba937f1.js.map": "/adventure-landing/static/js/main.0ba937f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6a870a7.css",
+    "static/css/main.47bf66bd.css",
     "static/js/main.0ba937f1.js"
   ]
 }
