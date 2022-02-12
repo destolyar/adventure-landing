@@ -4,19 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 140px 50px 140px;
   background-color: #fdfff0;
-  overflow: hidden;
-  
-
-  @include laptop{
-    padding: 25px 60px 25px 60px;
-  }
-
-  @include phones {
-   padding: 20px 30px 20px 30px;
-  }
-
   &__logo {
     width: 190px;
     height: 50px;
@@ -69,6 +57,11 @@
       @include description;
       color: $header-link-color;
 
+      @include default-hover;
+      &:hover {
+        color: $header-hover-link-color;
+      }
+
       @include laptop {
         display: flex;
         justify-content: center;
@@ -97,6 +90,11 @@
         padding: 20px;
         color: $primary-text-color;
         background-color: gray;
+
+        &:hover {
+          color: $secondary-text-color;
+          background-color: rgb(92, 92, 92);
+        }
       }
     }
 

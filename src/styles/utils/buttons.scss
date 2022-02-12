@@ -23,6 +23,21 @@
   
 }
 
+@mixin play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 8px solid lighten($color: $default-button-background, $amount: 35%);
+  @include default-hover;
+  &:hover {
+    
+    border: 8px solid $default-button-hover-background;
+  }
+}
+
 @mixin cta-button {
   
 }

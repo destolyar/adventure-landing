@@ -1,6 +1,77 @@
 @import '../utils/utils.scss';
 
 .welcome {
-  height: 400px;
-  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(#fdfff0, #FFF);
+
+  @include phones {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__text-content {
+    &__birds {
+      width: 120px;
+      height: 62px;
+      margin-left: 50%;
+      @include laptop {
+        display: none;
+      }
+    }
+
+    &__title {
+      margin-top: 95px;
+      min-width: 335px;
+      @include page-title;
+      @include laptop {
+        margin: 0;
+      }
+    }
+
+    &__description {
+      @include description;
+      margin-top: 24px;
+      color: $description-text-color;
+
+      @include laptop {
+        margin-top: 16px;
+      }
+
+      @include phones {
+        margin-top: 12px;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      margin-top: 110px;
+
+      @include laptop {
+        margin-top: 40px
+      }
+
+      &__try-btn {
+        @include sign-up-button;
+        width: 240px;
+        height: 72px;
+      }
+  
+      &__play-btn {
+        @include play-button;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__illustration {
+    width: 550px;
+    height: 635px;
+
+    @include phones {
+      width: 340px;
+      height: 390px;
+    }
+  }
 }
