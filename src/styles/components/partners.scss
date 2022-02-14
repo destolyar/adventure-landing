@@ -1,1 +1,44 @@
 @import '../utils/utils.scss';
+
+.partners {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FEFDFD;
+
+  @include laptop {
+    background-color: #FFFF
+  }
+  
+  &__title {
+    @include title;
+  }
+
+  &__items {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include laptop {
+      margin-top: 50px;
+    }
+
+    @include phones {
+      margin-top: 60px;
+    }
+    
+    &__item {
+      width: 160px;
+      @include laptop {
+        width: 100px;
+      }
+
+      @include phones {
+        width: 120px;
+      }
+    }
+  }
+}

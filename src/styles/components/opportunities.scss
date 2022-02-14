@@ -1,1 +1,127 @@
 @import '../utils/utils.scss';
+
+.opportunities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__title {
+    display: none;
+
+    @include title;
+  }
+
+  &__decorate-circle {
+    width: 600px;
+    height: 600px;
+    z-index: 0;
+    border-radius: 50%;
+    border:100px solid lighten($color: $default-button-hover-background, $amount: 35%);
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    top: 0px;
+    justify-content: space-around;
+    position: absolute;
+
+    @include laptop {
+      position: static;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include tablets {
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 20px;
+
+      @include laptop {
+        margin-top: 0;
+      }
+      
+
+      &__number-container {
+        margin-top: 40px;
+        padding: 10px;
+        border-radius: 50%;
+        border: 3px solid lighten($color: $default-button-hover-background, $amount: 30%);
+        
+        @include laptop {
+          margin-top: 20px
+        }
+
+        @include tablets {
+          margin-top: 30px
+        }
+        
+        &__number {
+          @include opportunity-number-style;
+          @include description;
+          color: $secondary-text-color;
+        }
+      }
+
+      &__image {
+        width: 290px;
+
+        @include laptop {
+          width: 220px;
+        }
+
+        @include tablets {
+          width: 350px
+        }
+      }
+
+      &__subtitle {
+        @include subtitle;
+      }
+
+      &__description {
+        @include description;
+        text-align: center;
+        max-width: 290px;
+      }
+    }
+  }
+}
+
+
+#first-item {
+  margin-top: 189px;
+
+  @include laptop {
+    margin-top: 39px;
+  }
+}
+
+#third-item {
+  margin-top: 150px;
+  @include laptop {
+    margin-top: 0;
+  }
+}
+
+#second-item {
+  @include laptop {
+    margin-top: 71px;
+  }
+}
+
+#first-item, #second-item, #third-item {
+  @include tablets {
+    margin-top: 0;
+  }
+}

@@ -31,6 +31,7 @@
 
     &__description {
       @include description;
+      max-width: 515px;
       margin-top: 24px;
       color: $description-text-color;
 
@@ -69,9 +70,13 @@
     width: 550px;
     height: 635px;
 
-    @include phones {
+    @include laptop {
       width: 340px;
       height: 390px;
+    }
+
+    @include phones {
+      margin-top: 30px;
     }
   }
 }

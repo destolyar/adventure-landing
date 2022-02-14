@@ -1,1 +1,72 @@
 @import '../utils/utils.scss';
+
+.features {
+  background: $features-background;
+
+  &__title {
+    @include title;
+    color: $secondary-text-color;
+  }
+
+  &__features-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    @include tablets {
+      flex-direction: column;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: 365px 365px;
+      grid-template-rows: 200px;
+      grid-gap: 60px;
+
+      @include laptop {
+        grid-template-columns: 260px 260px;
+      }
+
+      @include tablets {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      &__item {
+        @include tablets {
+          display: flex;
+          width: 350;
+          height: 150px;
+        }
+
+        &__image {
+          margin-right: 40px;
+          @include tablets {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &__text {
+          &__subtitle {
+            @include subtitle;
+            color: $secondary-text-color;
+          }
+
+          &__description {
+            @include description;
+            color: $secondary-text-color;
+          }
+        }
+        
+      }
+    }
+
+    &__image {
+      width: 555px;
+
+      @include phones {
+        width: 350px;
+      }
+    }
+  }
+}
