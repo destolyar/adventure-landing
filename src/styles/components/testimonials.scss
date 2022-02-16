@@ -1,1 +1,134 @@
 @import '../utils/utils.scss';
+
+.testimonials {
+  background-color: $primary-background;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__slides {
+      display: flex;
+      transition: 1s;
+      width: 3200px;
+      height: 380px;
+
+      @include tablets {
+        width: 1440px;
+      }
+      
+      &__slide {
+        display: flex;
+        justify-content: center;
+        padding: 90px 70px 90px 70px;
+        margin-right: 30px;
+        width: 770px;
+        border-radius: 25px;
+        background-color: white;
+
+        @include tablets {
+          width: 350px;
+          margin-right: 10px;
+          padding: 30px 20px 30px 20px;
+        }
+
+        &__client-comment {
+
+          &__info {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+
+            &__photo {
+              margin-right: 10px
+            }
+
+            &__personal {
+              display: flex;
+              flex-direction: column;
+
+              &__name {
+                @include description;
+              }
+
+              &__status {
+                @include description;
+                color: $description-secondary-text-color;
+              }
+            }
+          }
+
+          &__text {
+            @include description;
+          }
+        }
+      }
+    }
+
+    &__controls {
+      display: flex;
+      &__control {
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+        transition: 0.2s;
+        background-color: $default-slider-button-color;
+
+        @include default-hover;
+      }
+    }
+  }
+}
+
+#first-slide-control, #second-slide-control, #third-slide-control, #fourth-slide-control {
+  display: none;
+}
+
+#first-slide-control:checked ~ .testimonials__wrapper__slides {
+  margin-left: calc(3200px/2 + (770px + 30px * 2));
+
+  @include tablets {
+    margin-left: calc(1440px/2 + (350px + 10px * 2));
+  }
+}
+
+#second-slide-control:checked ~ .testimonials__wrapper__slides {
+  margin-left: calc((3200px/2 + (770px + 30px * 2)) - ((770px * 2) + 60px));
+
+  @include tablets {
+    margin-left: calc((1440px/2 + (350px + 10px * 2)) - ((350px * 2) + 20px));
+  }
+}
+
+#third-slide-control:checked ~ .testimonials__wrapper__slides {
+  margin-left: calc((3200px/2 + (770px + 30px * 2)) - ((770px * 4) + 120px));
+
+  @include tablets {
+    margin-left: calc((1440px/2 + (350px + 10px * 2)) - ((350px * 4) + 40px));
+  }
+}
+
+#fourth-slide-control:checked ~ .testimonials__wrapper__slides {
+  margin-left: calc((3200px/2 + (770px + 30px * 2)) - ((770px * 6) + 180px));
+
+  @include tablets {
+    margin-left: calc((1440px/2 + (350px + 10px * 2)) - ((350px * 6) + 60px));
+  }
+}
+
+
+#first-slide-control:checked ~ #first-slide-control-label,
+#second-slide-control:checked ~ #second-slide-control-label, 
+#third-slide-control:checked ~ #third-slide-control-label,
+#fourth-slide-control:checked ~ #fourth-slide-control-label {
+  width: 20px;
+  background-color: $default-slider-button-active-color;
+  border-radius: 5px;
+}
+
