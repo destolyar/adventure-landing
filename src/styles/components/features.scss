@@ -34,15 +34,20 @@
       &__item {
         @include tablets {
           display: flex;
+          align-items: flex-start;
           width: 350;
           height: 150px;
         }
 
         &__image {
+          margin-top: 5px;
           margin-right: 40px;
           @include tablets {
-            width: 30px;
             height: 30px;
+          }
+
+          @include phones {
+            margin-top: 10px;
           }
         }
 

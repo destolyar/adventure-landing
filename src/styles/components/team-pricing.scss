@@ -1,0 +1,291 @@
+@import '../utils/utils.scss';
+
+.team-pricing {
+  background: linear-gradient($primary-background, white);
+
+  &__background {
+    position: relative;
+
+    @include laptop {
+      display: none;
+    }
+    &__first-airplane, &__second-airplane {
+      position: absolute;
+      width: 160px;
+      height: 90px;
+    }
+
+    &__first-airplane {
+      top: 140px;
+      left: -240px;
+    }
+
+    &__second-airplane {
+      right: 0;
+    }
+
+    &__first-cloud, &__second-cloud {
+      position: absolute;
+      width: 700px;
+      height: 780px;
+    }
+
+    &__first-cloud {
+      top: 40px;
+      right: -140px;
+    }
+
+    &__second-cloud {
+      top: 400px;
+      left: -140px;
+    }
+
+    &__second-cloud {
+      transform: rotateX(180deg);
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__team {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__title {
+        @include title;
+      }
+
+      &__cards {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        
+        @include tablets {
+          margin-top: 0;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        &__item {
+          @include tablets {
+            margin-top: 20px;
+          }
+
+          &__image {
+            width: 300px;
+            height: 300px;
+
+            @include desktop {
+              width: 250px;
+              height: 250px;
+            }
+
+            @include laptop {
+              width: 200px;
+              height: 200px;
+            }
+
+            @include tablets {
+              width: 300px;
+              height: 300px;
+            }
+          }
+
+          &__name {
+            margin-top: 30px;
+            @include description;
+            color: $primary-text-color;
+
+            @include laptop {
+              margin-top: 20px;
+            }
+
+            @include tablets {
+              margin-top: 10px
+            }
+          }
+
+          &__status {
+            @include description;
+            color: $description-secondary-text-color;
+          }
+        }
+      }
+    }
+
+    &__pricing {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 180px;
+      width: 100%;
+      &__title {
+        @include title;
+      }
+
+      &__cards {
+        margin-top: 50px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+
+        @include laptop {
+          overflow-x: scroll;
+          align-items: flex-start;
+        }
+
+        @include tablets {
+          overflow-x: none;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 60px;
+          border-radius: 15px;
+          background-color: white;
+          
+          @include desktop {
+            padding: 20px;
+          }
+
+          @include laptop {
+            min-width: 350px;
+            border-radius: 0;
+            margin-right: 10px;
+          }
+
+          @include tablets {
+            min-width: 300px;
+          }
+
+          @include phones {
+            min-width: 250px;
+          }
+
+          &__image {
+            width: 120px;
+            height: 120px;
+          }
+          
+          &__title {
+            margin-top: 35px;
+            @include title;
+            color: $primary-text-color;
+          }
+
+          &__price {
+            @include title;
+            color: #A36EBA;
+
+            &__mounth {
+              font-size: 14px
+            }
+          }
+
+          &__description {
+            @include description;
+            text-align: center;
+            max-width: 260px;
+            color: $primary-text-color;
+
+            @include laptop {
+              max-width: 300px;
+            }
+          }
+        }
+      }
+
+      &__know-more {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 100px;
+        padding: 80px;
+        width: 100%;
+        border-radius: 30px;
+        background-color: $secondary-background;
+
+        @include laptop {
+          padding: 60px;
+        }
+
+        @include tablets {
+          flex-direction: column;
+          padding: 25px;
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+
+        &__text-content {
+          display: flex;
+          flex-direction: column;
+
+          @include phones {
+            align-items: center;
+          }
+
+          &__title {
+            @include title;
+            color: $secondary-text-color;
+          }
+
+          &__description {
+            margin-top: 20px;
+            max-width: 430px;
+            @include description;
+            color: $secondary-text-color;
+          }
+
+          &__button {
+            margin-top: 20px;
+            @include cta-button;
+          }
+        }
+
+        &__image {
+          width: 525px;
+
+          @include laptop {
+            width: 325px;
+          }
+
+          @include tablets {
+            margin-top: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#premium-card-title, #premium-card-price, #premium-card-description {
+  color: $secondary-text-color;
+
+  @include laptop {
+    color: $primary-text-color;
+  }
+}
+
+#premium-card {
+  background-color: #A36EBA;
+  padding-bottom: 180px;
+
+  @include laptop {
+    background-color: white;
+    padding-bottom: 60px;
+  }
+}

@@ -7,8 +7,7 @@ import { Partners } from './components/Partners';
 import { Opportunities } from './components/Opportunities';
 import { Features } from './components/Features';
 import { Testimonials } from './components/Testimonials';
-import { Team } from './components/Team';
-import { Pricing } from './components/Pricing';
+import { TeamPricing } from './components/TeamPricing';
 import { Faq } from './components/Faq';
 import { SignUp } from './components/SignUp';
 import { Footer } from './components/Footer';
@@ -23,8 +22,7 @@ const App: React.FunctionComponent = () => {
       <Opportunities/>
       <Features/>
       <Testimonials/>
-      <Team/>
-      <Pricing/>
+      <TeamPricing/>
       <Faq/>
       <SignUp/>
       <Footer/>

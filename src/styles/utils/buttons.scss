@@ -33,13 +33,24 @@
   border: 8px solid lighten($color: $default-button-background, $amount: 35%);
   @include default-hover;
   &:hover {
-    
     border: 8px solid $default-button-hover-background;
   }
 }
 
 @mixin cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 240px;
+  padding: 30px 80px;
+  border: none;
+  border-radius: 20px;
+  background-color: $cta-button-color;
+  color: $secondary-text-color;
   
+  &:hover {
+    @include default-button-hover;
+  }
 }
 
 @mixin opportunity-number-style {
