@@ -34,10 +34,6 @@
           pointer-events: none;
         }
 
-        &:hover > &__title,  &:hover > &__arrow {
-          color: $secondary-text-color;
-        }
-
         &__title {
           @include subtitle;
           color: $primary-text-color;
@@ -70,6 +66,10 @@
       &:hover {
         cursor: pointer;
         background-color: $default-button-background;
+      }
+
+      &:hover > &__header > &__header__title, &:hover > &__header > &__header__arrow {
+        color: $secondary-text-color;
       }
     }
   }
