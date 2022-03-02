@@ -1,1 +1,122 @@
 @import '../utils/utils.scss';
+
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: $secondary-background;
+
+  &__background {
+    @include tablets {
+      display: none;
+    }
+    &__first-cloud, &__second-cloud, &__third-cloud {
+      width: 400px;
+      position: absolute;
+    }
+
+    &__first-cloud {
+      top: 50%;
+      left: -100px;
+    }
+
+    &__second-cloud {
+      right: -80px;
+      top: 40%;
+    }
+
+    &__third-cloud {
+      width: 220px;
+      right: -80px;
+      top: 50%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    &__title {
+      @include subtitle;
+      color: $secondary-text-color;
+      @include tablets {
+        text-align: center;
+      }
+    }
+
+    &__description {
+      max-width: 400px;
+      @include description;
+      color: $description-text-color;
+      opacity: 50%;
+
+      @include tablets {
+        text-align: center;
+      }
+    }
+
+    &__subscribe-form {
+      margin-top: 25px;
+      display: flex;
+      width: 480px;
+
+      @include tablets {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__input {
+        height: 60px;
+        width: 300px;
+        border: solid 2px $subscribe-elements-color;
+        border-radius: 10px 0 0 10px;
+        box-sizing: border-box;
+
+        &::-webkit-input-placeholder {
+          @include description;
+          opacity: 50%;
+          color: $description-text-color;
+        }
+        &::-moz-placeholder {
+          padding-left: 20px;
+          @include description;
+          opacity: 50%;
+          color: $description-text-color;
+        }
+        &:-ms-input-placeholder {
+          padding-left: 20px;
+          @include description;
+          opacity: 50%;
+          color: $description-text-color;
+        }
+
+        &[type="text"] {
+          @include description;
+          padding-left: 20px;
+          color: $primary-text-color;
+          background-color: transparent;
+        }
+
+        @include tablets {
+          width: 350px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &__button {
+        @include subscribe-button;
+      }
+    }
+  }
+}

@@ -65,3 +65,25 @@
   border: 2px solid lighten($color: $default-button-hover-background, $amount: 35%);
   background-color: $default-button-hover-background;
 }
+
+@mixin subscribe-button {
+  height: 60px;
+  @include description;
+  color: $secondary-text-color;
+  background-color: $subscribe-elements-color;
+  border: solid 2px $subscribe-elements-color;
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+
+  &:hover {
+    transition: .2s;
+    background-color: $default-button-hover-background;
+    cursor: pointer;
+  }
+
+  @include tablets {
+    width: 350px;
+    height: 60px;
+    border-radius: 10px;
+  }
+}
