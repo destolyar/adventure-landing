@@ -31,7 +31,7 @@ export const TeamPricing: React.FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="team-pricing__content__pricing">
+          <div className="team-pricing__content__pricing" id="Pricing">
             <h2 className="team-pricing__content__pricing__title">Pricing</h2>
             <div className="team-pricing__content__pricing__cards">
               <div className="team-pricing__content__pricing__cards__item">

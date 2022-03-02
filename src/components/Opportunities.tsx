@@ -3,7 +3,7 @@ import '../styles/components/opportunities.scss'
 
 export const Opportunities: React.FunctionComponent = () => {
   return(
-      <section className="opportunities">
+      <section className="opportunities" id="About">
         <div className="opportunities__decorate-circle"></div>
         <h2 className="opportunities__title">How it works</h2>
         <div className="opportunities__content">

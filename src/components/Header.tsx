@@ -39,11 +39,11 @@ export const Header: React.FunctionComponent = () => {
           <div className="header__navbar__burger-menu-label__line"></div>
         </label>
       </div>
-
+      
       <div className="header__content">
-          <a className="header__content__link" href="">Home</a>
-          <a className="header__content__link" href="">About</a>
-          <a className="header__content__link" href="">Pricing</a>
+          <a className="header__content__link" href="#Home">Home</a>
+          <a className="header__content__link" href="#About">About</a>
+          <a className="header__content__link" href="#Pricing">Pricing</a>
           <a className="header__content__sign-up" href="">Sign Up</a>
           <a className="header__content__sign-up-link" href="">Sign Up</a>
       </div>

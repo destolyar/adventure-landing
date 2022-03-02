@@ -1,1 +1,121 @@
 @import '../utils/utils.scss';
+
+.faq {
+  background-color: $faq-background;
+
+  &__title {
+    @include title;
+  }
+
+  &__description {
+    @include description;
+    max-width: 490px;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    
+    &__item {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      margin-top: 20px;
+      padding: 20px 40px;
+      border-radius: 10px;
+      transition: all 0.5s;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablets {
+          pointer-events: none;
+        }
+
+        &:hover > &__title,  &:hover > &__arrow {
+          color: $secondary-text-color;
+        }
+
+        &__title {
+          @include subtitle;
+          color: $primary-text-color;
+
+          @include tablets {
+            @include description;
+          }
+        }
+
+        &__arrow {
+          transition: 0.5s;
+          @include tablets {
+            @include description;
+          }
+        }
+      }
+
+      &__main {
+        max-height: 0;
+        opacity: 0%;
+        transition: 0.5s;
+        &__text {
+          display: none;
+          padding: 20px;
+          @include description;
+          color: $description-text-color;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $default-button-background;
+      }
+    }
+  }
+}
+
+#faq-first-checkbox, 
+#faq-second-checkbox, 
+#faq-third-checkbox, 
+#faq-fourth-checkbox {
+  display: none;
+}
+
+#faq-first-checkbox:checked ~ #faq-first-block,
+#faq-second-checkbox:checked ~ #faq-second-block,
+#faq-third-checkbox:checked ~ #faq-third-block,
+#faq-fourth-checkbox:checked ~ #faq-fourth-block {
+  min-height: 100px;
+  background-color: $default-button-background;
+}
+
+#faq-first-checkbox:checked ~ #faq-first-block > .faq__info-block__item__main,
+#faq-second-checkbox:checked ~ #faq-second-block > .faq__info-block__item__main,
+#faq-third-checkbox:checked ~ #faq-third-block > .faq__info-block__item__main,
+#faq-fourth-checkbox:checked ~ #faq-fourth-block > .faq__info-block__item__main {
+  opacity: 100%;
+  max-height: 500px;
+}
+
+#faq-first-checkbox:checked ~ #faq-first-block > .faq__info-block__item__main > .faq__info-block__item__main__text,
+#faq-second-checkbox:checked ~ #faq-second-block > .faq__info-block__item__main > .faq__info-block__item__main__text,
+#faq-third-checkbox:checked ~ #faq-third-block > .faq__info-block__item__main > .faq__info-block__item__main__text,
+#faq-fourth-checkbox:checked ~ #faq-fourth-block > .faq__info-block__item__main > .faq__info-block__item__main__text {
+  display: block;
+}
+
+#faq-first-checkbox:checked ~ #faq-first-block > .faq__info-block__item__header > .faq__info-block__item__header__title,
+#faq-second-checkbox:checked ~ #faq-second-block > .faq__info-block__item__header > .faq__info-block__item__header__title,
+#faq-third-checkbox:checked ~ #faq-third-block > .faq__info-block__item__header > .faq__info-block__item__header__title,
+#faq-fourth-checkbox:checked ~ #faq-fourth-block > .faq__info-block__item__header > .faq__info-block__item__header__title {
+  color: $secondary-text-color;
+}
+
+#faq-first-checkbox:checked ~ #faq-first-block > .faq__info-block__item__header > .faq__info-block__item__header__arrow,
+#faq-second-checkbox:checked ~ #faq-second-block > .faq__info-block__item__header > .faq__info-block__item__header__arrow,
+#faq-third-checkbox:checked ~ #faq-third-block > .faq__info-block__item__header > .faq__info-block__item__header__arrow,
+#faq-fourth-checkbox:checked ~ #faq-fourth-block > .faq__info-block__item__header > .faq__info-block__item__header__arrow {
+  transform: rotate(180deg);
+  color: $secondary-text-color;
+}

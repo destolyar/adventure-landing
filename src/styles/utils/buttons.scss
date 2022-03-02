@@ -42,9 +42,10 @@
   align-items: center;
   justify-content: center;
   max-width: 240px;
-  padding: 30px 80px;
+  padding: 30px 60px;
   border: none;
   border-radius: 20px;
+  @include description;
   background-color: $cta-button-color;
   color: $secondary-text-color;
   

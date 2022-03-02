@@ -1,15 +1,14 @@
 import React from "react";
 import '../styles/components/testimonials.scss'
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 export const Testimonials: React.FunctionComponent = () => {
   return(
       <section className="testimonials">
-        <div className="testimonials__wrapper">
-          <input type="radio" name="slide" value='slide1' id="first-slide-control" defaultChecked/>
-          <input type="radio" name="slide" value='slide2' id="second-slide-control"/>
-          <input type="radio" name="slide" value='slide3' id="third-slide-control"/>
-          <input type="radio" name="slide" value='slide4' id="fourth-slide-control"/>
-          <div className="testimonials__wrapper__slides">
+        <div className="testimonials__slider">
+          <Carousel swipeable={true} emulateTouch={true} autoPlay={true} interval={3000}>
             <div className="testimonials__wrapper__slides__slide">
               <div className="testimonials__wrapper__slides__slide__client-comment">
                 <p className="testimonials__wrapper__slides__slide__client-comment__text">
@@ -67,13 +66,7 @@ export const Testimonials: React.FunctionComponent = () => {
                   </div>
                 </div>
             </div>
-          </div>
-          <div className="testimonials__wrapper__controls">
-            <label className="testimonials__wrapper__controls__control" id="first-slide-control-label" htmlFor="first-slide-control"></label>
-            <label className="testimonials__wrapper__controls__control" id="second-slide-control-label" htmlFor="second-slide-control"></label>
-            <label className="testimonials__wrapper__controls__control" id="third-slide-control-label" htmlFor="third-slide-control"></label>
-            <label className="testimonials__wrapper__controls__control" id="fourth-slide-control-label" htmlFor="fourth-slide-control"></label>
-          </div>
+          </Carousel>
         </div>
       </section>
   )

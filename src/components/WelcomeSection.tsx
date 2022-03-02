@@ -3,7 +3,7 @@ import '../styles/components/welcome-section.scss'
 
 export const WelcomeSection: React.FunctionComponent = () => {
   return(
-    <section className="welcome">
+    <section className="welcome" id="Home">
       <div className="welcome__text-content">
         <img className="welcome__text-content__birds" src="./img/birds.png"></img>
         <h1 className="welcome__text-content__title">Designed and built<br/>to keep you selling</h1>
