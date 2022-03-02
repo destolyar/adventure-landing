@@ -1,1 +1,80 @@
 @import '../utils/utils.scss';
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include laptop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      width: 180px;
+
+      @include laptop {
+        width: 250px;
+      }
+    }
+
+    &__tagline {
+      margin-top: 20px;
+      @include description;
+    }
+  }
+
+  &__links-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include laptop {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__second-container {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          @include description;
+        }
+      }
+    }
+  }
+
+  &__links-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include laptop {
+      margin-top: 20px;
+    }
+
+    &__link {
+      @include description;
+    }
+
+    &__icons {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 20px 20px 20px 20px;
+      column-gap: 20px;
+
+    }
+
+  }
+}

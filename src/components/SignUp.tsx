@@ -3,7 +3,7 @@ import '../styles/components/signup.scss'
 
 export const SignUp: React.FunctionComponent = () => {
   return(
-      <section className="signup">
+      <section className="signup" id="SignUp">
         <div className="signup__background">
           <img className="signup__background__first-cloud" src="/img/background-cloud-2.png" alt="" />
           <img className="signup__background__second-cloud" src="/img/background-cloud-2.png" alt="" />

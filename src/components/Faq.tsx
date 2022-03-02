@@ -3,7 +3,7 @@ import '../styles/components/faq.scss'
 
 export const Faq: React.FunctionComponent = () => {
   return(
-      <section className="faq">
+      <section className="faq" id="FAQ">
         <h2 className="faq__title">FAQ</h2>
         <p className="faq__description">Craven omni memoria patriae zombieland clairvius narcisse religionis sunt diri undead historiarum.</p>
         <div className="faq__info-block">
