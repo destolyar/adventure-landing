@@ -5,9 +5,9 @@ export const SignUp: React.FunctionComponent = () => {
   return(
       <section className="signup" id="SignUp">
         <div className="signup__background">
-          <img className="signup__background__first-cloud" src="/img/background-cloud-2.png" alt="" />
-          <img className="signup__background__second-cloud" src="/img/background-cloud-2.png" alt="" />
-          <img className="signup__background__third-cloud" src="/img/background-cloud-2.png" alt="" />
+          <img className="signup__background__first-cloud" src="./img/background-cloud-2.png" alt="" />
+          <img className="signup__background__second-cloud" src="./img/background-cloud-2.png" alt="" />
+          <img className="signup__background__third-cloud" src="./img/background-cloud-2.png" alt="" />
         </div>
         <div className="signup__content">
           <h2 className="signup__content__title">Sign up to our newsletter!</h2>

@@ -75,6 +75,9 @@
       grid-template-columns: 20px 20px 20px 20px;
       column-gap: 20px;
 
+      &__item {
+        @include default-hover;
+      }
     }
 
   }
