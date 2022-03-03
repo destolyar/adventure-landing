@@ -52,6 +52,10 @@
       @include tablets {
         text-align: center;
       }
+
+      @include phones {
+        font-size: 1.4rem;
+      }
     }
 
     &__description {

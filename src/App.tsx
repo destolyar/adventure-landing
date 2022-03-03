@@ -11,6 +11,7 @@ import { TeamPricing } from './components/TeamPricing';
 import { Faq } from './components/Faq';
 import { SignUp } from './components/SignUp';
 import { Footer } from './components/Footer';
+import { UnderFooter } from './components/Underline';
 
 
 const App: React.FunctionComponent = () => {
@@ -26,6 +27,7 @@ const App: React.FunctionComponent = () => {
       <Faq/>
       <SignUp/>
       <Footer/>
+      <UnderFooter/>
     </div>
   );
 }
