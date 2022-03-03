@@ -1,3 +1,5 @@
+@import './styles/utils/utils.scss';
+
 body,
 h1,
 h2,
@@ -17,4 +19,16 @@ dd {
 
 html {
   scroll-behavior: smooth;
+
+  @include tablets {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
