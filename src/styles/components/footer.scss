@@ -50,6 +50,7 @@
 
         &__item {
           @include description;
+          color: $primary-text-color;
         }
       }
     }
